@@ -13,9 +13,17 @@
 		4BFC5FDF1EF79CBA002FB084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FDD1EF79CBA002FB084 /* Main.storyboard */; };
 		4BFC5FE11EF79CBA002FB084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FE01EF79CBA002FB084 /* Assets.xcassets */; };
 		4BFC5FE41EF79CBA002FB084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FE21EF79CBA002FB084 /* LaunchScreen.storyboard */; };
+		4BFC5FF31EF79CD1002FB084 /* SlotMachinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC5FEC1EF79CD1002FB084 /* SlotMachinesView.m */; };
+		4BFC5FF41EF79CD1002FB084 /* SlotMachineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFC5FEE1EF79CD1002FB084 /* SlotMachineScrollView.m */; };
+		4BFC5FF51EF79CD1002FB084 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FEF1EF79CD1002FB084 /* 1.png */; };
+		4BFC5FF61EF79CD1002FB084 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FF01EF79CD1002FB084 /* 2.png */; };
+		4BFC5FF71EF79CD1002FB084 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FF11EF79CD1002FB084 /* 3.png */; };
+		4BFC5FF81EF79CD1002FB084 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFC5FF21EF79CD1002FB084 /* 4.png */; };
+		D9135148EF6A04DBF4434BF7 /* libPods-SlotMachine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FC27F170BF4122ECA9853B /* libPods-SlotMachine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25FC27F170BF4122ECA9853B /* libPods-SlotMachine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlotMachine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFC5FD11EF79CBA002FB084 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFC5FD51EF79CBA002FB084 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BFC5FD71EF79CBA002FB084 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +34,16 @@
 		4BFC5FE01EF79CBA002FB084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BFC5FE31EF79CBA002FB084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BFC5FE51EF79CBA002FB084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BFC5FEB1EF79CD1002FB084 /* SlotMachinesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlotMachinesView.h; sourceTree = "<group>"; };
+		4BFC5FEC1EF79CD1002FB084 /* SlotMachinesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotMachinesView.m; sourceTree = "<group>"; };
+		4BFC5FED1EF79CD1002FB084 /* SlotMachineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlotMachineScrollView.h; sourceTree = "<group>"; };
+		4BFC5FEE1EF79CD1002FB084 /* SlotMachineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlotMachineScrollView.m; sourceTree = "<group>"; };
+		4BFC5FEF1EF79CD1002FB084 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		4BFC5FF01EF79CD1002FB084 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		4BFC5FF11EF79CD1002FB084 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		4BFC5FF21EF79CD1002FB084 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		4D1E61AD645AAB1EDD329A0B /* Pods-SlotMachine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlotMachine.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine.release.xcconfig"; sourceTree = "<group>"; };
+		CA2215B238AC96FFDA8EF9BE /* Pods-SlotMachine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlotMachine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9135148EF6A04DBF4434BF7 /* libPods-SlotMachine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +63,8 @@
 			children = (
 				4BFC5FD31EF79CBA002FB084 /* SlotMachine */,
 				4BFC5FD21EF79CBA002FB084 /* Products */,
+				9C3C945666C08B23E0B5424F /* Pods */,
+				B7C3AF4829315623319A6FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +83,14 @@
 				4BFC5FD81EF79CBA002FB084 /* AppDelegate.m */,
 				4BFC5FDA1EF79CBA002FB084 /* ViewController.h */,
 				4BFC5FDB1EF79CBA002FB084 /* ViewController.m */,
+				4BFC5FEB1EF79CD1002FB084 /* SlotMachinesView.h */,
+				4BFC5FEC1EF79CD1002FB084 /* SlotMachinesView.m */,
+				4BFC5FED1EF79CD1002FB084 /* SlotMachineScrollView.h */,
+				4BFC5FEE1EF79CD1002FB084 /* SlotMachineScrollView.m */,
+				4BFC5FEF1EF79CD1002FB084 /* 1.png */,
+				4BFC5FF01EF79CD1002FB084 /* 2.png */,
+				4BFC5FF11EF79CD1002FB084 /* 3.png */,
+				4BFC5FF21EF79CD1002FB084 /* 4.png */,
 				4BFC5FDD1EF79CBA002FB084 /* Main.storyboard */,
 				4BFC5FE01EF79CBA002FB084 /* Assets.xcassets */,
 				4BFC5FE21EF79CBA002FB084 /* LaunchScreen.storyboard */,
@@ -79,6 +108,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9C3C945666C08B23E0B5424F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA2215B238AC96FFDA8EF9BE /* Pods-SlotMachine.debug.xcconfig */,
+				4D1E61AD645AAB1EDD329A0B /* Pods-SlotMachine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7C3AF4829315623319A6FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25FC27F170BF4122ECA9853B /* libPods-SlotMachine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BFC5FE81EF79CBA002FB084 /* Build configuration list for PBXNativeTarget "SlotMachine" */;
 			buildPhases = (
+				0C98267B5FA27C652BFEC669 /* [CP] Check Pods Manifest.lock */,
 				4BFC5FCD1EF79CBA002FB084 /* Sources */,
 				4BFC5FCE1EF79CBA002FB084 /* Frameworks */,
 				4BFC5FCF1EF79CBA002FB084 /* Resources */,
+				85CF525146E07A6F341343A7 /* [CP] Embed Pods Frameworks */,
+				B21B1BFAFEC944F2C1ADC745 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +159,7 @@
 				TargetAttributes = {
 					4BFC5FD01EF79CBA002FB084 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = FBCB5X99HB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BFC5FE41EF79CBA002FB084 /* LaunchScreen.storyboard in Resources */,
+				4BFC5FF81EF79CD1002FB084 /* 4.png in Resources */,
+				4BFC5FF51EF79CD1002FB084 /* 1.png in Resources */,
+				4BFC5FF61EF79CD1002FB084 /* 2.png in Resources */,
+				4BFC5FF71EF79CD1002FB084 /* 3.png in Resources */,
 				4BFC5FE11EF79CBA002FB084 /* Assets.xcassets in Resources */,
 				4BFC5FDF1EF79CBA002FB084 /* Main.storyboard in Resources */,
 			);
@@ -145,13 +199,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C98267B5FA27C652BFEC669 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85CF525146E07A6F341343A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B21B1BFAFEC944F2C1ADC745 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4BFC5FCD1EF79CBA002FB084 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4BFC5FDC1EF79CBA002FB084 /* ViewController.m in Sources */,
+				4BFC5FF41EF79CD1002FB084 /* SlotMachineScrollView.m in Sources */,
 				4BFC5FD91EF79CBA002FB084 /* AppDelegate.m in Sources */,
+				4BFC5FF31EF79CD1002FB084 /* SlotMachinesView.m in Sources */,
 				4BFC5FD61EF79CBA002FB084 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +374,12 @@
 		};
 		4BFC5FE91EF79CBA002FB084 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA2215B238AC96FFDA8EF9BE /* Pods-SlotMachine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FBCB5X99HB;
 				INFOPLIST_FILE = SlotMachine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lengchao.SlotMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,9 +388,12 @@
 		};
 		4BFC5FEA1EF79CBA002FB084 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1E61AD645AAB1EDD329A0B /* Pods-SlotMachine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FBCB5X99HB;
 				INFOPLIST_FILE = SlotMachine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lengchao.SlotMachine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +419,7 @@
 				4BFC5FEA1EF79CBA002FB084 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

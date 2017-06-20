@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SlotMachinesView : UIView
-
+-(void)setupData;
+-(void)beginScrollToWinning:(BOOL)isWinning;
 @end

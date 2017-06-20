@@ -7,7 +7,7 @@
 //
 
 #import "SlotMachineScrollView.h"
-
+#import <Masonry/Masonry.h>
 @interface SlotMachineScrollView ()
 
 @end
@@ -16,6 +16,10 @@
 {
     UIScrollView *_scrollView;
     CGFloat height;
+    NSMutableArray *contentArr;
+    CGFloat space;
+    BOOL isScrolled;
+    CGFloat contentOffSetY;
 }
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -26,45 +30,66 @@
 }
 
 -(void)configUI{
-    _scrollView = [[UIScrollView alloc] initWithFrame:self.frame];
+    _scrollView = [[UIScrollView alloc] init];
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_scrollView];
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.bottom.equalTo(self);
+    }];
 }
 
 -(void)setUpIcons{
-    height = _scrollView.frame.size.height;
+    height = 40;
+    space = 20;
     CGFloat width = _scrollView.frame.size.width;
-    for (NSInteger i = 0; i < _iconArr.count * self.kTurn ; i ++) {
-        UIImageView *view = [UIImageView new];
-        view.frame = CGRectMake(0, i * height, width, height);
-        view.contentMode = UIViewContentModeScaleAspectFit;
-        if (i%_iconArr.count == 0) {
-            view.image = [UIImage imageNamed:@"1"];
-        }else if (i%_iconArr.count == 1){
-            view.image = [UIImage imageNamed:@"2"];
-        }else if (i%_iconArr.count == 2){
-            view.image = [UIImage imageNamed:@"3"];
-        }else if (i%_iconArr.count == 3){
-            view.image = [UIImage imageNamed:@"4"];
-        }
-        [_scrollView addSubview:view];
+    
+    if (contentArr.count > 0) {
+        [contentArr removeAllObjects];
     }
-    [_scrollView setContentSize:CGSizeMake(0, _iconArr.count*height * self.kTurn)];
+    
+    if (contentArr == nil) {
+        contentArr = [NSMutableArray array];
+    }
+    
+    for (NSInteger i = 0; i < self.kTurn + 1; i ++) {
+        [contentArr addObjectsFromArray:_iconArr];
+    }
+    
+    for (NSInteger i = 0; i < contentArr.count; i ++) {
+        @autoreleasepool {
+            UIImageView *imgView = [UIImageView new];
+            imgView.frame = CGRectMake(0, i * (height + space), width, height);
+            imgView.contentMode = UIViewContentModeScaleAspectFit;
+            NSInteger tmpIndex = i%_iconArr.count;
+            imgView.image = [UIImage imageNamed:_iconArr[tmpIndex]];
+            [_scrollView addSubview:imgView];
+        }
+    }
+    [_scrollView setContentSize:CGSizeMake(0, contentArr.count * (height + space))];
+    NSInteger index = arc4random()%(_iconArr.count - 1);
+    [_scrollView setContentOffset:CGPointMake(0, index * (height + space) +(height + space)/2)];
 }
 
--(void)beginScroll{
-    [_scrollView setContentOffset:CGPointMake(0, 0)];
+-(void)scrollToIndex:(NSInteger)index{
     [UIScrollView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        _scrollView.contentOffset = CGPointMake(0, self.iconArr.count*height*_kTurn * 0.1);
+        if (isScrolled) {
+            _scrollView.contentOffset = CGPointMake(0,  contentOffSetY + (height + space));
+        }else{
+            _scrollView.contentOffset = CGPointMake(0, _iconArr.count * (height + space));
+        }
     } completion:^(BOOL finished) {
         [UIScrollView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-            _scrollView.contentOffset = CGPointMake(0, self.iconArr.count*height*_kTurn * 0.9);
+            _scrollView.contentOffset = CGPointMake(0, (contentArr.count - _iconArr.count * 2) * (height + space));
         } completion:^(BOOL finished) {
             [UIScrollView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                _scrollView.contentOffset = CGPointMake(0, self.iconArr.count*height*_kTurn - height);
+                _scrollView.contentOffset = CGPointMake(0, (contentArr.count - _iconArr.count * 2) * (height + space) + (index + 1) * (height + space) - (height + space)/2);
             } completion:^(BOOL finished) {
-                
+                if (finished) {
+                    _scrollView.contentOffset = CGPointMake(0,  (index + 1) * (height + space) - (height + space)/2);
+                    contentOffSetY = _scrollView.contentOffset.y;
+                    isScrolled = YES;
+                }
             }];
         }];
     }];

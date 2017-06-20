@@ -12,4 +12,5 @@
 @property (strong , nonatomic) NSArray *iconArr;
 @property NSInteger kTurn;//转数
 -(void)setUpIcons;
+-(void)scrollToIndex:(NSInteger)index;
 @end
